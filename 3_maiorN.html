@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    /*3: Maior Número
+    Peça para o usuário informar dois números e diga qual dos dois é o maior número.*/
+
+    //ENTRADA
+    const numero1 = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
+    const numero2 = Number(prompt("Informe um segundo número qualquer.").replace(",", ".").trim())
+
+    //SAÍDA
+    if (isNaN(numero1) || isNaN(numero2)) {
+        alert(`Valor inválido encontrado.`);
+    }
+    else {
+        if (numero1 > numero2) {
+            alert(`O numero ${numero1} é maior que ${numero2}`).replace(".", ",");
+        }
+        else if (numero1 < numero2) {
+            alert(`O numero ${numero2} é maior que ${numero1}`).replace(".", ",");
+        }
+        else {
+            alert(`Estes dois numeros são iguais.`);
+        }
+    }
+</script>

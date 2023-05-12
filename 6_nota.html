@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+  /*6: Situação do aluno
+  Peça para o aluno informar as notas que obteve nos três trimestres. Calcule a média e apresente a seguinte mensagem:
+  - Se nota for menor que 4: Reprovado
+  - Se nota for menor que 6: Exame
+  - Se nota for acima de 6: Aprovado*/
+
+  //ENTRADA
+  const nota1 = Number(prompt("Qual foi sua nota no primeiro trimestre?").replace(",", ".").trim);
+  const nota2 = Number(prompt("Qual foi sua nota no segundo trimestre?").replace(",", ".").trim);
+  const nota3 = Number(prompt("Qual foi sua nota no terceiro trimestre?").replace(",", ".").trim);
+
+  //PROCESSAMENTO
+  if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+    alert(`Valores inválidos.`);
+  }
+  else {
+    if (([nota1 + nota2 + nota3] / 3).toFixed(1) < 4) {
+      alert(`Você foi reprovado.`).replace(".", ",");
+    }
+    else if (([nota1 + nota2 + nota3] / 3).toFixed(1) < 6) {
+      alert(`Você está em exame.`).replace(".", ",");
+    }
+    else if (([nota1 + nota2 + nota3] / 3).toFixed(1) > 6) {
+      alert(`Você está aprovado.`).replace(".", ",");
+    }
+  }
+  //SAÍDA
+
+</script>

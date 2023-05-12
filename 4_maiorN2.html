@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+    /*4: Maior Número [2]
+    Peça para o usuário informar três números e diga qual dos três é o maior número*/
+
+    //ENTRADA
+    const numero1 = Number(prompt("Informe um número qualquer.").trim().replace(",", "."));
+    const numero2 = Number(prompt("Informe um segundo número qualquer.").trim().replace(",", "."));
+    const numero3 = Number(prompt("Informe um terceiro número qualquer.").trim().replace(",", "."));
+
+    //SAÍDA
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+        alert(`Valor inválido encontrado.`)
+    }
+    else {
+        if (numero1 > numero2 && numero1 > numero3) {
+            alert(`O número ${numero1} é maior que os números ${numero2} e ${numero3}`);
+        }
+        else if (numero2 > numero1 && numero2 > numero3) {
+            alert(`O número ${numero2} é maior que os números ${numero1} e ${numero3}`);
+        }
+        else if (numero3 > numero1 && numero3 > numero2) {
+            alert(`O número ${numero3} é maior que os números ${numero1} e ${numero2}`);
+        }
+        else if (numero1 == numero2 && numero1 > numero3) {
+            alert(`Os números ${numero1} e ${numero2} são iguais, mas maiores que o número ${numero3}`);
+        }
+        else if (numero1 == numero3 && numero1 > numero2) {
+            alert(`Os números ${numero1} e ${numero3} são iguais, mas maiores que o número ${numero2}`);
+        }
+        else if (numero2 == numero1 && numero2 > numero3) {
+            alert(`Os números ${numero2} e ${numero1} são iguais, mas maiores que o número ${numero3} `)
+        }
+        else if (numero2 == numero3 && numero2 > numero1) {
+            alert(`Os números ${numero2} e ${numero3} são iguais, mas maiores que o número ${numero1} `)
+        }
+        else if (numero3 == numero1 && numero3 > numero2) {
+            alert(`Os números ${numero3} e ${numero1} são iguais, mas maiores que o número ${numero2} `)
+        }
+        else if (numero3 == numero2 && numero3 > numero1) {
+            alert(`Os números ${numero3} e ${numero2} são iguais, mas maiores que o número ${numero1} `)
+        }
+        else {
+            alert(`Todos os números são iguais`)
+        }
+    }
+</script>
